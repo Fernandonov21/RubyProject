@@ -12,11 +12,10 @@ In this project, we used Ruby to print "Hello World" to the console. We also cre
 
 ## Table of Contents
 - [Requirements](#requirements)
-- [Installation and Setup](#installation-and-setup)
+- [Installation and local etup](#installation-and-local-setup)
 - [How to Run the Project](#how-to-run-the-project)
-- [How to Use the Project](#how-to-use-the-project)
-- [Credits](#credits)
-- [License](#license)
+- [How to configure a docker image](#how-to-configure-a-docker-image)
+
 
 ## Requirements
 
@@ -43,10 +42,25 @@ In the terminal (you can use Command Prompt, PowerShell, or the VS Code integrat
 ```bash
 bundle install
 ```
-4. Run the app
+## How to run the project
 After the dependencies are installed, you can run the project using the following command:
 ```bash
 ruby Project5.rb
 ```
-
+To see the page you just follow the link:
+```bash
+http://localhost:4567
+```
+## How to configure a docker image
+The project has already a docker file so the only thing that you need is up the container
+1. In the terminal (you can use Command Prompt, PowerShell, or the VS Code integrated terminal), navigate to the project folder and execute the next command:
+```bash
+docker build -t rubyproject .
+```
+2. run the image
+```bash
+docker run -p 4567:4567 fernando785/rubyproject
+```
+## IMPORTANT
+To access the application at http://localhost:4567, ensure that port 4567 is available. If the port is already in use, stop any process occupying it and try running the command again.
 
